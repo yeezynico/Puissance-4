@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mon Jeu JSV</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="config">
+        <label for="lignes">Lignes :</label>
+        <input type="number" id="lignes" value="6">
+
+        <label for="colonnes">Colonnes :</label>
+        <input type="number" id="colonnes" value="7">
+
+        <label for="joueur1">Nom du joueur 1 :</label>
+        <input type="text" id="joueur1" placeholder="Nom du joueur 1">
+        <input type="color" id="couleur-joueur1" value="#DF1616">
+
+        <label for="joueur2">Nom du joueur 2 :</label>
+        <input type="text" id="joueur2" placeholder="Nom du joueur 2">
+        <input type="color" id="couleur-joueur2" value="#EEFF00">
+
+        <button id="generer">Générer le plateau</button>
+        <button id="restart">Recommencer</button>
+    </div>
+    <div>
+        <div id="joueur-actif" class="center"></div>
+        <div id="plateforme" class="center"></div>
+
+    </div>
+    <div>
+        <div id="score1"></div>
+        <div id="score2"></div>
+    </div>
+    <button id="annuler">Annuler le dernier coup</button>
+
+    <script type="module" src="./Babel/main.js"></script>
+</body>
+
+</html>
