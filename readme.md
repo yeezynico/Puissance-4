@@ -33,4 +33,4 @@ choisissez la tails du plateau.
 Chaque joueur choisis leur couleur de pion et rentre leur nom puis lance le jeux
 
 **Ressources supplémentaires:**
-Vous pouvez tester le jeux sur mon Versel : (https://puissance-4-rosy.vercel.app/)
+Vous pouvez tester le jeux sur mon Versel : https://puissance-4-two.vercel.app/
