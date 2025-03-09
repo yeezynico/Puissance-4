@@ -8,34 +8,53 @@
 </head>
 
 <body>
-    <div class="config">
-        <label for="lignes">Lignes :</label>
-        <input type="number" id="lignes" value="6">
+    <div class="container_stat">
+        <div class="config">
+            <div class="flex-row">
+                <div class="col-input">
+                    <label for="lignes">Lignes :</label>
+                    <input type="number" id="lignes" value="6" class="input">
+                </div>
+                <div class="col-input">
+                    <label for="colonnes">Colonnes :</label>
+                    <input type="number" id="colonnes" value="7" class="input">
+                </div>
+            </div>
 
-        <label for="colonnes">Colonnes :</label>
-        <input type="number" id="colonnes" value="7">
+            <div class="flex-row">
+                <div class="col-input">
 
-        <label for="joueur1">Nom du joueur 1 :</label>
-        <input type="text" id="joueur1" placeholder="Nom du joueur 1">
-        <input type="color" id="couleur-joueur1" value="#DF1616">
+                    <label for="joueur1">Nom du joueur 1 :</label>
+                    <input type="text" id="joueur1" placeholder="Nom du joueur 1" class="input">
+                    <label for="joueur2">couleur du joueur : </label>
+                    <input type="color" id="couleur-joueur1" value="#DF1616">
+                </div>
+                <div class="col-input">
 
-        <label for="joueur2">Nom du joueur 2 :</label>
-        <input type="text" id="joueur2" placeholder="Nom du joueur 2">
-        <input type="color" id="couleur-joueur2" value="#EEFF00">
+                    <label for="joueur2">Nom du joueur 2 :</label>
+                    <input type="text" id="joueur2" placeholder="Nom du joueur 2" class="input">
+                    <label for="joueur2">couleur du joueur :</label>
+                    <input type="color" id="couleur-joueur2" value="#EEFF00">
+                </div>
 
-        <button id="generer">Générer le plateau</button>
-        <button id="restart">Recommencer</button>
+            </div>
+            <div class="btn-start-restart">
+                <button id="generer" class="button-confirm">Générer le plateau</button>
+                <button id="restart" class="button-confirm">Recommencer</button>
+            </div>
+        </div>
+        <div class="center_scrore">
+            <div id="score1"></div>
+            <div id="score2"></div>
+        </div>
     </div>
-    <div>
-        <div id="joueur-actif" class="center"></div>
-        <div id="plateforme" class="center"></div>
 
+    <div class="center_game">
+        <div id="joueur-actif"class="joueur-actif"></div>
+        <div id="plateforme"></div>
     </div>
-    <div class="center_scrore">
-        <div id="score1"></div>
-        <div id="score2"></div>
-    </div>
-    <button id="annuler">Annuler le dernier coup</button>
+
+    <!-- <button id="annuler">Annuler le dernier coup</button> -->
 
     <script type="module" src="./Babel/main.js"></script>
 </body>
