@@ -25,6 +25,8 @@ pnpm add --save-dev @babel/core @babel/cli @babel/preset-env
 
 pnpm run build
 
+Ajouté la ligne : "build": "babel src -d lib" dans le fichier **package.json** dans la partie script après la ligne test.
+
 **Lancer le jeux:**
 
 choisissez la tails du plateau.

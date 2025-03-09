@@ -14,14 +14,93 @@ body {
     background-color: rgba(0, 0, 255, 0.371);
 }
 
-.center {
+.flex-row {
     display: flex;
-    justify-content: center;
+    gap: 15px;
 }
 
-.center_scrore{
+.col-input {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+}
+
+.config {
+    padding: 10px;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.621);
+    width: 30%;
+}
+
+.container_stat {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center_scrore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-size: 40px;
+}
+
+label {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.input {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgba(128, 128, 128, 0.388);
+    box-shadow: 1px 1px black;
+    font-size: 15px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input:focus {
+    border: 2px solid rgba(0, 0, 255, 0.242);
+}
+
+.button-log:active,
+.button-confirm:active {
+    box-shadow: 0px 0px;
+    transform: translate(3px, 3px);
+}
+
+.button-confirm {
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgba(128, 128, 128, 0.388);
+    box-shadow: 4px 4px black;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-start-restart {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.joueur-actif{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.center_game {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
