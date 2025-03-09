@@ -2,6 +2,7 @@ body {
     background-color: rgba(255, 192, 203, 0.658);
 }
 
+/* Plateau de jeu */
 #plateforme table td {
     width: 50px;
     height: 50px;
@@ -14,16 +15,15 @@ body {
     background-color: rgba(0, 0, 255, 0.371);
 }
 
-.flex-row {
+/* Conteneur principal - PAS DE PASSAGE EN COLONNE */
+.container_stat {
     display: flex;
-    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; /* Empêche le passage en colonne */
 }
 
-.col-input {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Configuration (bloc de paramètres) */
 .config {
     padding: 10px;
     background: lightgrey;
@@ -35,13 +35,10 @@ body {
     border: 2px solid black;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.621);
     width: 30%;
+    min-width: 280px;
 }
 
-.container_stat {
-    display: flex;
-    justify-content: space-around;
-}
-
+/* Score */
 .center_scrore {
     display: flex;
     flex-direction: column;
@@ -51,11 +48,24 @@ body {
     font-size: 40px;
 }
 
+/* Alignement */
+.flex-row {
+    display: flex;
+    gap: 15px;
+}
+
+.col-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels et Inputs */
 label {
     color: black;
     font-weight: 900;
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 8px 0;
 }
 
 .input {
@@ -63,15 +73,18 @@ label {
     border: 2px solid black;
     background-color: rgba(128, 128, 128, 0.388);
     box-shadow: 1px 1px black;
-    font-size: 15px;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 5px 8px;
     outline: none;
+    width: 80%;
+    max-width: 180px;
 }
 
 .input:focus {
     border: 2px solid rgba(0, 0, 255, 0.242);
 }
 
+/* Boutons avec animation */
 .button-log:active,
 .button-confirm:active {
     box-shadow: 0px 0px;
@@ -79,28 +92,118 @@ label {
 }
 
 .button-confirm {
-    margin-top: 25px;
+    margin-top: 20px;
     border-radius: 5px;
     border: 2px solid black;
     background-color: rgba(128, 128, 128, 0.388);
     box-shadow: 4px 4px black;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    padding: 8px;
+    width: 80%;
+    max-width: 160px;
 }
 
+/* Boutons Start / Restart */
 .btn-start-restart {
     width: 70%;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
 }
-.joueur-actif{
-    font-size: 20px;
+
+/* Joueur actif */
+.joueur-actif {
+    font-size: 18px;
     font-weight: 600;
 }
 
+/* Zone de jeu */
 .center_game {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .config {
+        width: 35%;
+    }
+
+    #plateforme table td {
+        width: 55px;
+        height: 55px;
+    }
+
+    .center_scrore {
+        font-size: 30px;
+    }
+
+    .joueur-actif {
+        font-size: 16px;
+    }
+
+    .button-confirm {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .config {
+        width: 40%;
+    }
+
+    #plateforme table td {
+        width: 60px;
+        height: 60px;
+    }
+
+    .center_scrore {
+        font-size: 28px;
+    }
+
+    .joueur-actif {
+        font-size: 16px;
+    }
+
+    .input {
+        font-size: 13px;
+        width: 75%;
+    }
+
+    .button-confirm {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .config {
+        width: 45%;
+        padding: 10px;
+    }
+
+    #plateforme table td {
+        width: 65px;
+        height: 65px;
+    }
+
+    .center_scrore {
+        font-size: 25px;
+    }
+
+    .joueur-actif {
+        font-size: 15px;
+    }
+
+    .button-confirm {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .input {
+        font-size: 12px;
+        width: 70%;
+    }
 }
